@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Agendamento</h1>
+    <br>
+    
+    <form id="form" class="form" action="processar_agendamento.php" method="post">
+        <h3>Preencha abaixo o horário e serviços desejados:</h3>
+        <br>
+        <label for="data">Dia:</label>
+        <input type="date" id="data" name="data" required>
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" required>
+
+        <label for="servico">Serviço:</label>
+        <select id="servico" name="servico" required>
+            <option id="option" value="Debutante">Debutante</option>
+            <option id="option" value="Formatura">Formatura</option>
+            <option id="option" value="Maquiagem Social">Maquiagem Social</option>
+        </select>
+
+        <div class="plus">
+            <label for="cabelocheck">
+                Ondas no cabelo<input type="checkbox" id="cabelocheck" name="servico[]" value=" e Ondas no cabelo">
+            </label>
+
+            <!-- <label for="salaocheck1">
+                Outros serviços do salão <input type="checkbox" id="salaocheck1" name="servico[]" value=" Outros serviços do salao"> 
+            </label>
+
+            <label for="salaocheck2">
+                Não desejo outros serviços <input type="checkbox" id="salaocheck2" name="servico[]" value=" Não desejo outros serviços"> 
+            </label> -->
+        </div>
+
+        <button type="button" onclick="enviarMensagem()">Agendar</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -44,12 +44,6 @@ body * {
     padding: 0 24px;
 }
 
-#profile p {
-    font-weight: 500;
-    line-height: 24px;
-    margin-top: 8px;
-}
-
 #profile {
     text-align: center;
     padding: 24px;
@@ -165,13 +159,9 @@ footer {
     background-image: url(assets/Background.jpg);
 }
 
-
-/* Estilização do botão dentro da âncora */
-
 a button.wpp-link {
     display: inline-block;
     background-color: hsl(293, 89%, 35%);
-    /* Cor verde do WhatsApp */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -199,31 +189,30 @@ body.curso-corpo {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #f4f4f4; /* Cor de fundo suave */
-    font-family: Arial, sans-serif; /* Escolha a fonte desejada */
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
 }
 
 .curso {
-    font-size: 36px; /* Tamanho maior para o título */
-    color: #fff; /* Cor do texto do título */
-    text-transform: uppercase; /* Transformar o texto do título em maiúsculas */
+    font-size: 36px;
+    color: #fff;
+    text-transform: uppercase;
     text-align: center;
 }
 
 .curso-text {
-    font-size: 20px; /* Tamanho maior para o texto descritivo */
-    color: #666; /* Cor do texto descritivo */
-    margin: 20px 0; /* Espaçamento superior e inferior */
-    text-align: center; /* Centralizar o texto descritivo */
+    font-size: 20px;
+    color: #666;
+    margin: 20px 0;
+    text-align: center;
 }
 
 .curso-img {
     width: 85%;
-    max-width: 400px; /* Largura máxima da imagem */
-    height: auto; /* Isso permite que a altura seja dimensionada automaticamente para manter a proporção */
-    
+    max-width: 400px;
+    height: auto;
     box-shadow: 0 0 0 5px #fff;
-    background-color: #fff; /* Cor de fundo simulando a moldura */
+    background-color: #fff;
     display: block;
     margin: 0 auto;
 }
@@ -237,33 +226,114 @@ body.curso-corpo {
     margin: 0;
 }
 
+h1 {
+    text-align: center;
+    color: white;
+}
 
+h3 {
+    text-align: center;
+    color: white;
+}
 
+form {
+    display: block;
+    max-width: 300px;
+    margin: 20px auto;
+    margin-right: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    background-color: var(--surface-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-@keyframes blink {
-    0%,
-    100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+
+}
+
+#servico,
+#option {
+    color: black;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    color: black;
+    border: 1px solid var(--stroke-color);
+    border-radius: 4px;
+    ::placeholder {
+        color: #888;
     }
 }
 
-@keyframes slide-in {
-    from {
-        left: 0;
-    }
-    to {
-        left: 50%;
-    }
+button {
+    background-color: #f1af09;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
-@keyframes slide-out {
-    from {
-        left: 50%;
-    }
-    to {
-        left: 0;
-    }
+button:hover {
+    background-color: #c79d33;
+}
+
+.plus {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.plus label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 5px;
+    border: 1px solid #f1af09;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    font-size: 13px;
+    justify-content: space-between;
+}
+
+.plus label:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.plus input {
+    margin-right: 8px;
+    order: 1;
+    appearance: none; /* Remove default checkbox styling */
+    width: 18px; /* Set a specific width for the custom checkbox */
+    height: 18px;
+    margin-top: 15px;
+}
+
+.plus input:checked {
+    background-color: #f1af09; /* Change background color when checked */
+    border-color: #f1af09; /* Change border color when checked */
+}
+
+
+.plus input,
+.plus label {
+    cursor: pointer;
+}
+
+.plus label:hover {
+    color: #f1af09;
 }
