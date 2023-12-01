@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: white;
+    --bg-url: url(assets/backplace.png);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(255, 255, 255, 0.2);
+    --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light {
+    --text-color: black;
+    --bg-url: url(assets/Background.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+    --switch-bg-url: url(./assets/sun.svg);
+}
+
+body {
+    background-image: var(--bg-url);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+#container {
+    width: 100%;
+    max-width: 588px;
+    margin: 56px auto 0px;
+    padding: 0 24px;
+}
+
+#profile p {
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+#profile {
+    text-align: center;
+    padding: 24px;
+}
+
+#profile img {
+    width: 112px;
+}
+
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    animation: slide-back 0.2s;
+}
+
+.light #switch button {
+    right: 0;
+    left: initial;
+    animation: slide-in 0.2s forwards;
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+}
+
+ul li a {
+    display: flex;
+    justify-content: center;
+    padding: 16px 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+ul li a:hover {
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+    font-size: 24px;
+}
+
+#social-links a {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+#social-links a:hover {
+    background: var(--highlight-color);
+}
+
+footer {
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+#titulo1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+#subtitulo {
+    font-size: 30px;
+    margin: 20px 10px 10px;
+    justify-content: center;
+    padding: auto;
+}
+
+#sobre2 {
+    background-image: url(assets/Background.jpg);
+}
+
+
+/* Estilização do botão dentro da âncora */
+
+a button.wpp-link {
+    display: inline-block;
+    background-color: hsl(293, 89%, 35%);
+    /* Cor verde do WhatsApp */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+
+a button.wpp-link:hover {
+    background-color: hsl(293, 100%, 50%);
+}
+
+.insta-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body.curso-corpo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    font-family: Arial, sans-serif; /* Escolha a fonte desejada */
+}
+
+.curso {
+    font-size: 36px; /* Tamanho maior para o título */
+    color: #fff; /* Cor do texto do título */
+    text-transform: uppercase; /* Transformar o texto do título em maiúsculas */
+    text-align: center;
+}
+
+.curso-text {
+    font-size: 20px; /* Tamanho maior para o texto descritivo */
+    color: #666; /* Cor do texto descritivo */
+    margin: 20px 0; /* Espaçamento superior e inferior */
+    text-align: center; /* Centralizar o texto descritivo */
+}
+
+.curso-img {
+    width: 85%;
+    max-width: 400px; /* Largura máxima da imagem */
+    height: auto; /* Isso permite que a altura seja dimensionada automaticamente para manter a proporção */
+    
+    box-shadow: 0 0 0 5px #fff;
+    background-color: #fff; /* Cor de fundo simulando a moldura */
+    display: block;
+    margin: 0 auto;
+}
+
+.curso-corpo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
+    }
+}
