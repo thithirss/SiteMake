@@ -22,22 +22,20 @@ function enviarMensagem() {
         plus.push(checkbox.value);
     });
 
-    // Verificar se pelo menos um serviço foi selecionado
-    // if (plus.length === 0) {
-    //     alert("Por favor, selecione pelo menos um serviço.");
-    //     return;
-    // }
+    // var mensagem = "Olá , quero agendar uma maquiagem com você para o dia " + dataFormatada + " , às " + hora + 
+    // " para realizar uma maquiagem  " + servico + plus.join(", ");
+
+    var mensagem = "🌟 Olá! Estou super empolgado(a) para agendar uma maquiagem com você! 🎉\n\n" +
+    "🗓️ Data: " + dataFormatada + "\n" +
+    "⏰ Hora: " + hora + "\n" +
+    "💄 Serviço: " + servico + "\n" +
+    "🌈 Extras: " + (plus.length > 0 ? plus.join(", ") : "Nenhum extra selecionado") + "\n\n" +
+    "Mal posso esperar para esse momento incrível! 🥳";
 
 
-    var mensagem = "Olá, quero agendar uma maquiagem com você para o dia " + dataFormatada + " às " + hora + 
-    " para realizar uma maquiagem de " + servico + plus.join(", ");
-
-    // Substitua "seu_numero" pelo número de telefone para o qual você deseja enviar a mensagem
     var numeroTelefone = "+5531996844778";
 
-    // Criar a URL do WhatsApp com a mensagem
     var url = "https://api.whatsapp.com/send?phone=" + numeroTelefone + "&text=" + encodeURIComponent(mensagem);
 
-    // Redirecionar para a URL do WhatsApp
     window.location.href = url;
 }
