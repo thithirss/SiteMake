@@ -209,12 +209,13 @@ body.curso-corpo {
 
 .curso-img {
     width: 85%;
-    max-width: 400px;
+    max-width: 300px;
     height: auto;
     box-shadow: 0 0 0 5px #fff;
     background-color: #fff;
     display: block;
-    margin: 0 auto;
+    margin:auto;
+    
 }
 
 .curso-corpo {
